@@ -1,0 +1,59 @@
+{
+    "apiVersion": "v1",
+    "kind": "Namespace",
+    "metadata": {
+        "creationTimestamp": "2025-10-24T09:22:33Z",
+        "deletionTimestamp": "2025-10-24T09:31:21Z",
+        "labels": {
+            "kubernetes.io/metadata.name": "board"
+        },
+        "name": "board",
+        "resourceVersion": "106509",
+        "uid": "f8fafc27-6847-4a6a-89d3-c7440752cd1b"
+    },
+    "spec": {
+        "finalizers": [
+            
+        ]
+    },
+    "status": {
+        "conditions": [
+            {
+                "lastTransitionTime": "2025-10-24T09:31:27Z",
+                "message": "All resources successfully discovered",
+                "reason": "ResourcesDiscovered",
+                "status": "False",
+                "type": "NamespaceDeletionDiscoveryFailure"
+            },
+            {
+                "lastTransitionTime": "2025-10-24T09:31:27Z",
+                "message": "All legacy kube types successfully parsed",
+                "reason": "ParsedGroupVersions",
+                "status": "False",
+                "type": "NamespaceDeletionGroupVersionParsingFailure"
+            },
+            {
+                "lastTransitionTime": "2025-10-24T09:31:27Z",
+                "message": "All content successfully deleted, may be waiting on finalization",
+                "reason": "ContentDeleted",
+                "status": "False",
+                "type": "NamespaceDeletionContentFailure"
+            },
+            {
+                "lastTransitionTime": "2025-10-24T09:31:27Z",
+                "message": "Some resources are remaining: services. has 1 resource instances, targetgroupbindings.elbv2.k8s.aws has 1 resource instances",
+                "reason": "SomeResourcesRemain",
+                "status": "True",
+                "type": "NamespaceContentRemaining"
+            },
+            {
+                "lastTransitionTime": "2025-10-24T09:31:27Z",
+                "message": "Some content in the namespace has finalizers remaining: elbv2.k8s.aws/resources in 1 resource instances, service.k8s.aws/resources in 1 resource instances",
+                "reason": "SomeFinalizersRemain",
+                "status": "True",
+                "type": "NamespaceFinalizersRemaining"
+            }
+        ],
+        "phase": "Terminating"
+    }
+}
